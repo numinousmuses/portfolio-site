@@ -7,7 +7,7 @@ export default function Page() {
         Joshua Okolo
       </h1>
       <p className="mb-4">
-          {`Welcome to my portfolio. I like to build things. Read my articles to find out more. Thanks for swinging by :)`}
+          {`Welcome to my portfolio! I like to build things, read my articles to find out more. Thanks for swinging by :)`}
       </p>
       <div className="my-8">
         <BlogPosts />
