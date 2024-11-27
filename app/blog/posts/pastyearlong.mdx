@@ -1,0 +1,383 @@
+---
+title: 'What I’ve been working on for the past year (long)'
+publishedAt: '2024-11-26'
+summary: 'What I've been up to for the past 17 months or so.'
+---
+
+## Introduction
+
+Over the past 17 months, I've embarked on an exhilarating journey through the rapidly evolving landscape of artificial intelligence. My fascination with machine learning began in my senior year of college, primarily fueled by participating in competitions and diving deep into Kaggle's rich content. This exploration wasn't just academic; it ignited a passion that led me to conceive and develop **Levlex**, a project that embodies my vision for the future of AI integration.
+
+In this comprehensive account, I aim to share the genesis of Levlex, the challenges faced, the strategic decisions made, and the innovations that emerged along the way. I'll delve into why I shifted from cloud-based solutions to local AI, the development of the **Genesiss AI API**, and how these tools are designed to empower both developers and end-users. My hope is that this narrative not only highlights the technical aspects of my work but also provides insights into the thought processes and philosophies that underpin these projects.
+
+## The Birth of Levlex
+
+### Early Inspirations and Questions
+
+The release of advanced Large Language Models (LLMs) marked a significant milestone in AI. Witnessing their capabilities, I couldn't help but ponder the possibilities they presented. A pivotal question arose: *What if LLMs could output JSON and use it to call functions?* This wasn't just a hypothetical; it was a practical inquiry into how we could leverage LLMs to perform more complex, real-world tasks by integrating them with functional programming paradigms.
+
+This question led me to explore the concept of **agent AI**, where AI models don't just process and generate text but also interact with other systems and perform actions. The idea was to move beyond conversational interfaces and enable AI to execute functions, manipulate data structures, and drive applications autonomously.
+
+### Anticipating AI Trends
+
+At the time, LLMs were limited by relatively small context windows, restricting the amount of information they could handle in a single interaction. I anticipated a trend where increasing these context windows would become a priority, enabling models to process more extensive inputs and maintain longer conversational histories. Following this, I predicted that AI development would focus on:
+
+1. **Training Smarter Models**: Enhancing the cognitive capabilities of AI to understand and generate more nuanced and contextually relevant outputs.
+
+2. **Adding Internet Access**: Allowing models to retrieve real-time information, making them more current and versatile.
+
+3. **Incorporating Multimodal Abilities**: Enabling AI to process and generate not just text but also images, audio, and other data forms.
+
+4. **Integrating Agents**: Providing AI with the ability to perform actions in the real world, bridging the gap between passive information processing and active task execution.
+
+In retrospect, this foresight aligned closely with the direction taken by many leading AI companies. The industry has indeed moved toward expanding context windows, integrating multimodal functionalities, and developing agent-based models, with several major players announcing shifts toward agent AI solutions for 2025.
+
+### Initial Development and Cloud Deployment
+
+With this vision in mind, I set out to develop Levlex as a cloud-based solution. Cloud deployment seemed to offer numerous advantages:
+
+- **Accessibility**: Users could access Levlex from any device, anywhere, without worrying about hardware compatibility or performance constraints.
+
+- **Data Synchronization**: User data and interactions could be seamlessly synced across devices, providing a consistent experience.
+
+- **Scalability**: Leveraging cloud infrastructure promised the ability to scale resources up or down based on demand.
+
+However, as I delved deeper into the development process, I began to encounter significant challenges inherent in cloud-based AI applications.
+
+## The Shift to Local AI
+
+### Understanding the Limitations of Cloud-Based LLMs
+
+One of the most pressing issues with cloud-based LLMs is the **lack of true scalability**. While cloud infrastructure can scale computational resources, the costs associated with running large-scale AI models are substantial. These costs are often managed by:
+
+- **Limiting Context Windows**: Reducing the amount of text the model processes to lower computational load.
+
+- **Restricting Output Lengths**: Capping the length of generated responses to conserve resources.
+
+- **Enforcing Rate Limits**: Limiting the number of requests a user can make within a certain timeframe to prevent overuse.
+
+These limitations directly impact the user experience, making interactions with AI less seamless and more constrained. Furthermore, many popular LLM applications offset these costs by relying on significant investor funding, essentially subsidizing user access. As a bootstrapped developer without access to such capital, I realized that this model was neither sustainable nor aligned with my goals.
+
+### Embracing Local AI Solutions
+
+Faced with these challenges, I began to consider an alternative approach: developing a powerful **local AI suite** that users could run directly on their devices. This shift was motivated by several key factors:
+
+- **User Empowerment**: By running AI locally, users gain full control over their experience without reliance on external servers or internet connectivity.
+
+- **Cost Efficiency**: Eliminating the need for expensive cloud infrastructure reduces costs for both the developer and the user.
+
+- **Performance Optimization**: Local AI can leverage the full power of the user's hardware, potentially offering faster response times and more robust capabilities.
+
+### Challenging the Subscription Model
+
+Another consideration was the prevalent **subscription pricing model** in the software industry. While subscriptions provide companies with recurring revenue, they can be a deterrent for users who prefer ownership over rental. I wanted to offer a product that adhered to the "buy once, keep forever" philosophy, providing lasting value without ongoing fees.
+
+By focusing on local AI, I could offer Levlex as a one-time purchase, aligning with this philosophy and appealing to users who are increasingly fatigued by the proliferation of subscription services.
+
+## The Benefits of Local AI
+
+### Enhanced Privacy and Data Security
+
+One of the most significant advantages of local AI is the **guarantee of privacy**. When AI runs on a user's device, there's no need to transmit data over the internet to external servers. This is especially critical for:
+
+- **Professionals Handling Sensitive Data**: Lawyers, doctors, financial advisors, and others who deal with confidential information are often legally prohibited from sharing data with third-party services.
+
+- **Privacy-Conscious Users**: Individuals who are uncomfortable with their data being stored or analyzed by corporations can use AI without these concerns.
+
+- **Regulatory Compliance**: Organizations can ensure compliance with data protection regulations by keeping data processing in-house.
+
+### Removing Usage Constraints
+
+Local AI eliminates many of the limitations associated with cloud-based services:
+
+- **No Rate Limits**: Users can interact with the AI as frequently as needed without worrying about hitting usage caps.
+
+- **Expanded Context Windows**: Without the cost constraints of cloud computing, the AI can handle larger inputs and maintain longer conversational histories.
+
+- **Cost Savings**: Users avoid per-token costs and subscription fees, making AI more accessible and affordable.
+
+### Enabling Advanced AI Agents
+
+The removal of usage constraints makes local AI particularly well-suited for **AI agents** that perform complex, resource-intensive tasks. For example:
+
+- **Advanced Internet Search**: An AI agent that retrieves, analyzes, and summarizes web content requires significant processing power and data handling.
+
+- **Recursive Analysis**: Agents that delve deep into topics, generating subqueries and exploring multiple sources, benefit from the expanded capabilities of local AI.
+
+In a cloud-based model, such agents would be prohibitively expensive due to the high computational costs. Local AI makes these advanced functionalities practical and accessible.
+
+### Technical Considerations and Hardware Requirements
+
+Adopting local AI does come with technical challenges, primarily related to hardware requirements. AI models, especially those with advanced capabilities, are large and require substantial RAM and processing power. Through extensive testing, I've determined that:
+
+- **Minimum RAM**: 8 GB is the absolute minimum required to run Levlex, though performance may be limited.
+
+- **Recommended RAM**: 16 GB provides a better experience, allowing for smoother interactions and more complex tasks.
+
+- **Optimal RAM**: 32 GB or more unlocks the full potential of Levlex, enabling the AI to handle extensive workloads efficiently.
+
+As technology advances and hardware becomes more powerful and affordable, these requirements will become less of a barrier for most users.
+
+## Developing the Genesiss AI API
+
+### Addressing Complexity in AI Integration
+
+While developing Levlex, I recognized that integrating LLMs into applications involves numerous complexities:
+
+- **Memory Management**: Handling conversational histories and contextual data requires robust memory solutions.
+
+- **Prompt Engineering**: Crafting effective prompts for LLMs is a nuanced task that can significantly impact AI performance.
+
+- **Function Calling and Integration**: Enabling the AI to perform actions, execute functions, and interact with other systems adds layers of complexity.
+
+To simplify this process for other developers, I set out to create the **Genesiss AI API**, a platform that abstracts these complexities and provides a streamlined interface for AI integration.
+
+### Core Features of the Genesiss AI API
+
+The Genesiss AI API is designed with several key features:
+
+- **Complete Chat Endpoint**: This endpoint handles the entire interaction cycle with the AI, including:
+
+  - Prompting the LLM.
+  
+  - Managing and updating chat history.
+  
+  - Storing and retrieving memories.
+  
+  - Handling function calls and responses.
+
+  Developers can build AI applications with minimal code, focusing on their unique functionalities rather than underlying AI mechanics.
+
+- **Automated Memory Store**: The API automatically creates and manages a memory store for each chat session, adding and searching memories as needed. This ensures that the AI maintains context and provides coherent, relevant responses.
+
+- **Chat ID System**: Each interaction is associated with a unique chat ID, allowing developers to retrieve histories, perform memory searches, and manage sessions effectively.
+
+### Model Agnosticism and Future-Proofing
+
+An important design philosophy behind the Genesiss AI API is **model agnosticism**. By abstracting away the specifics of the AI models used, the API ensures that applications remain compatible with future advancements. This approach benefits developers and users by:
+
+- **Ensuring Up-to-Date Performance**: As newer, more capable models become available, the API can integrate them without requiring changes to the applications built on top of it.
+
+- **Simplifying Development**: Developers don't need to worry about selecting or configuring AI models; they can trust that the API provides the best available options.
+
+- **Reducing Maintenance Overhead**: Applications remain stable and performant over time without the need for frequent updates or refactoring.
+
+### Specialized Endpoints and Agents
+
+In addition to the complete chat endpoint, the Genesiss AI API offers specialized endpoints for various use cases:
+
+- **Internet-Enabled Models**: These models can perform internet searches, retrieve real-time data, and incorporate external information into their responses.
+
+- **Task-Specific Agents**:
+
+  - **Code Agent**: Generates, executes, and returns outputs from code based on user prompts, facilitating rapid prototyping and testing.
+
+  - **DocuComp Agent**: Performs comprehensive document and image comprehension, extracting key information from complex inputs.
+
+  - **DocuGen Agent**: Automatically generates text or PDF documents, streamlining content creation processes.
+
+  - **GraphGen Agent**: Creates dynamic graphs and visualizations from simple prompts, aiding in data analysis and presentation.
+
+  - **ImageGen Agent**: Generates images based on text descriptions, useful for design, marketing, and creative projects.
+
+  - **Memory Agent**: Provides advanced memory management through a custom vector-based memory API, ensuring context-rich interactions.
+
+## Introducing Workflows and Brains
+
+### Workflows: Orchestrating Complex Processes
+
+The introduction of **Workflows** represents a significant advancement in automating and orchestrating AI tasks. Workflows allow users to define:
+
+- **Configurations of Agents**: Specify which agents to use and how they interact within a process.
+
+- **Schedules**: Set timings for when tasks should run, whether it's a one-time execution or recurring events.
+
+- **Parameters and Conditions**: Define inputs, triggers, and conditions that guide the AI's actions.
+
+**Use Cases for Workflows**:
+
+- **Knowledge Discovery**: Automate the exploration and analysis of large datasets, research papers, or market trends. The AI can generate summaries, identify patterns, and even suggest new areas of inquiry.
+
+- **Process Automation**: Streamline repetitive tasks such as data entry, report generation, or content aggregation, freeing up time for more strategic activities.
+
+- **Customized Notifications**: Set up alerts and updates based on specific criteria, ensuring that users stay informed about relevant developments.
+
+### Brains: Contextual Memory Stores
+
+Complementing Workflows is the concept of **Brains**, which are dedicated memory stores that enhance the AI's contextual understanding. Unlike traditional models that rely on a single, shared memory, Brains allow for:
+
+- **Contextual Segmentation**: Create separate memory stores for different projects, topics, or clients, ensuring that information remains organized and relevant.
+
+- **Enhanced Accuracy**: By narrowing the AI's focus to a specific Brain, responses become more precise and tailored to the context.
+
+- **Collaborative Sharing**: Teams can share Brains, enabling collective knowledge bases and consistent information across members.
+
+### Synergizing Workflows and Brains
+
+The combination of Workflows and Brains unlocks powerful capabilities:
+
+- **Dynamic Adaptation**: Workflows can interact with multiple Brains, accessing and updating information as needed.
+
+- **Personalized AI Assistants**: Users can create AI agents that understand their preferences, history, and style, providing highly personalized interactions.
+
+- **Scalable Solutions**: Businesses can scale their AI solutions by deploying multiple Workflows and Brains tailored to different departments, projects, or objectives.
+
+## The Importance of Communicating Use Cases
+
+### Bridging the Gap Between Technical Innovation and User Understanding
+
+Throughout the development of Levlex and the Genesiss AI API, I learned that **effective communication** is as important as technical innovation. While I was excited about the features and capabilities of these tools, I realized that users needed clear explanations and practical examples to fully grasp their value.
+
+By presenting concrete use cases, I was able to:
+
+- **Demonstrate Real-World Applications**: Showing how the tools can solve specific problems helps users envision their potential impact.
+
+- **Encourage Engagement and Feedback**: Users began asking questions like, "Can it do X?" or "How would it handle Y?", providing valuable insights into their needs and expectations.
+
+- **Refine Features**: User feedback highlighted areas for improvement and inspired new features that aligned more closely with real-world use cases.
+
+### Tailoring Communication to Different Audiences
+
+Recognizing that users have varying levels of technical expertise, I made efforts to:
+
+- **Simplify Technical Concepts**: Use accessible language and analogies to explain complex ideas.
+
+- **Provide Multiple Formats**: Offer documentation, tutorials, and interactive demos to cater to different learning preferences.
+
+- **Highlight Benefits Over Features**: Focus on how the tools can enhance productivity, save time, or solve problems rather than just listing technical specifications.
+
+## Ensuring Longevity and Extensibility
+
+### Designing for Future-Proofing
+
+In the fast-paced world of AI, obsolescence is a significant risk. To ensure that Levlex remains relevant and valuable, I focused on:
+
+- **Extensibility**: Designing the system to accommodate new features, models, and technologies as they emerge.
+
+- **Modularity**: Building components that can be updated or replaced independently, facilitating maintenance and upgrades.
+
+- **Open Architecture**: Allowing for integration with other tools and platforms, increasing interoperability and flexibility.
+
+### Empowering Users and Developers
+
+By making Levlex and the Genesiss AI API extensible, I aimed to:
+
+- **Enable Customization**: Users and developers can tailor the tools to their specific needs, adding or modifying functionalities as required.
+
+- **Foster a Community**: Encouraging collaboration and sharing of extensions, templates, and best practices among users.
+
+- **Promote Innovation**: Providing a foundation upon which others can build, leading to new applications and advancements.
+
+### Commitment to User Ownership
+
+Staying true to the "buy once, keep forever" philosophy, I ensured that:
+
+- **Users Own Their Data**: All data processed by Levlex remains on the user's device, respecting privacy and control.
+
+- **No Forced Upgrades**: Users aren't compelled to purchase new versions or subscriptions to maintain functionality.
+
+- **Transparency**: Clear communication about updates, features, and changes empowers users to make informed decisions.
+
+## Other Projects and Developments
+
+### Genesiss Agents
+
+To make advanced AI functionalities accessible without coding, I developed **Genesiss Agents**:
+
+- **No-Code Workflows**: Users can create and manage Workflows through an intuitive interface.
+
+- **Interactive Features**: Tools like Canvas Chat and Chambers provide engaging ways to interact with the AI.
+
+- **Customization**: Users can adjust settings, preferences, and parameters to tailor the AI's behavior.
+
+### Genesiss Search
+
+**Genesiss Search** is an AI-powered search engine designed to:
+
+- **Understand Intent**: Go beyond keyword matching to comprehend the context and purpose behind queries.
+
+- **Provide Summarized Results**: Deliver concise, relevant information, saving users time.
+
+- **Adapt to Users**: Learn from interactions to improve accuracy and personalization over time.
+
+### Bytesize
+
+**Bytesize** serves as a personalized information aggregator:
+
+- **Scheduled Updates**: Users receive summaries of updates every 1 to 6 hours, keeping them informed without information overload.
+
+- **Customizable Feeds**: Select topics, sources, and formats that align with individual interests and needs.
+
+- **AI Summarization**: Leverages AI to condense information into digestible formats.
+
+### iPhone Offline AI Chat App
+
+Recognizing the potential for private AI on mobile devices, I developed an **offline AI chat app** for iPhone:
+
+- **Voice to Notes**: Transcribe speech to text quickly, ideal for capturing ideas on the go.
+
+- **AI Camera**: Analyze and interpret visual inputs, offering features like object recognition and contextual information.
+
+- **Privacy-Focused**: All processing occurs on the device, ensuring data remains secure.
+
+### Surgical Robotics System
+
+Beyond software, I ventured into hardware with the development of a **surgical robotics system**:
+
+- **Integration of AI and Robotics**: Combining machine learning algorithms with robotic hardware to enhance surgical precision.
+
+- **Collaborative Design**: Working with medical professionals to ensure the system meets practical needs and regulatory standards.
+
+- **Innovation in Healthcare**: Aiming to improve patient outcomes through technology.
+
+Details about this project are available in a dedicated article, where I delve into the technical aspects and the journey of bringing this concept to life.
+
+## Reflections on the Journey
+
+### Challenges Faced
+
+The path hasn't been without obstacles:
+
+- **Technical Hurdles**: Overcoming limitations in hardware compatibility, optimizing performance, and ensuring stability required persistent effort and creative problem-solving.
+
+- **Resource Constraints**: Operating without substantial funding meant finding cost-effective solutions and prioritizing features that delivered the most value.
+
+- **Market Dynamics**: Navigating a competitive landscape where technology evolves rapidly necessitated agility and adaptability.
+
+### Lessons Learned
+
+This journey has taught me invaluable lessons:
+
+- **User-Centric Design**: Keeping the user's needs at the forefront leads to more impactful and adopted solutions.
+
+- **Importance of Community**: Engaging with users, developers, and peers provides insights, fosters collaboration, and drives innovation.
+
+- **Resilience and Persistence**: Building something meaningful often involves setbacks, but perseverance leads to growth and success.
+
+### Future Directions
+
+Looking ahead, I'm excited about:
+
+- **Expanding Functionality**: Continuously enhancing Levlex and the Genesiss AI API with new features and capabilities.
+
+- **Collaborations**: Partnering with others to explore new applications and reach broader audiences.
+
+- **Education and Outreach**: Sharing knowledge through tutorials, workshops, and speaking engagements to inspire and empower others.
+
+## Conclusion
+
+The past 17 months have been a transformative period of exploration, creation, and growth. From the inception of Levlex to the development of the Genesiss AI API and beyond, I've been driven by a passion to harness the potential of AI in ways that are innovative, practical, and empowering.
+
+I believe that AI should be accessible, private, and tailored to the user's needs. By focusing on local AI solutions, extensibility, and user ownership, I aim to contribute to a future where technology enhances our capabilities without compromising our values.
+
+Thank you for taking the time to read about my work. I invite you to explore my projects further and join me on this journey:
+
+- **Blog**: [joshuaokolo.xyz](https://joshuaokolo.xyz) — Dive into articles where I discuss these projects in more detail and share insights on AI and technology.
+
+- **Levlex**: [levlex.xyz](https://levlex.xyz) — Learn more about Levlex, its features, and how it can enhance your productivity.
+
+- **Genesiss AI**: [genesiss.tech](https://genesiss.tech) — Explore the Genesiss AI API and see how it can simplify AI integration for your projects.
+
+- **Numinous Labs**: [numinouslabs.xyz](https://numinouslabs.xyz) — Discover other innovative projects and initiatives I'm involved in.
+
+I'm excited about the future and look forward to sharing more updates, collaborating with others, and continuing to push the boundaries of what's possible with AI and technology in general.
