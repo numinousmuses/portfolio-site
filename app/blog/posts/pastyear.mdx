@@ -1,0 +1,81 @@
+---
+title: 'What I’ve been working on for the past year'
+publishedAt: '2024-11-26'
+summary: 'What I've been up to for the past 17 months or so.'
+---
+
+# What I’ve been working on for the past year
+
+I started with the idea for levlex my senior year, when I was still learning and exploring machine learning, primarily through competitions and content on Kaggle. 
+
+When LLM’s dropped I quickly asked the question “what if you can have them output json, and use the json to call functions?” And this was the birth of my venture into agents AI. 
+
+While realizing this, I predicted that the trend would be to increase model context windows (at the time, model context windows were significantly smaller than they are now). Then after increasing context windows, training smarter models, after which adding internet access and multimodal ability will be implemented, and then adding agents to give LLMs functionality in the real world. In retrospect, this is the trajectory that AI companies have taken, with many companies, including the big names announcing a shift towards agents for 2025.
+
+Initially, I was developing Levlex to be deployed in the cloud. The benefit of cloud deployment is that anybody can use it on any device, and users can use the same account on multiple devices and have the data and information “transferrable” between devices because it’s all in cloud. I had learned a lot in the process, more on my learnings later. 
+
+I quickly realized that Large Language Models (LLMs) are unique, in that LLM-based SAAS isn’t scaleable. Objectively it is, but it requires limiting the context windows (aka the number of words the user can input), as well as the output length of the model. Moreover, there are also rate limits to worry about as well. The current popular LLM applications are burning through investor money, but because I am bootstrapping, I didn’t have that advantage, so I shifted my focus to local. 
+
+Current culture has popularized the subscription pricing model. I’ve been very interested in entrepreneurship since childhood, and when I realized the shift to subscriptions, I asked myself the question of what I could make that still utilizes the buy once, keep forever pricing model. I decided that while competitors were focused on the cloud, I wanted to focus on creating a powerful local AI suite.
+
+The benefits of such a product I believed compelling, and personally I’d utilize the local AI product I develop because I believe in these benefits.
+
+The first benefit is that of privacy. Having a local AI system enables me to not worry about the information I’m inputting into the model. Most people won’t want to input their personal health data, or private information about themselves into cloud-based LLM services, especially since the companies review your data and use it to train models. There’s definitely a demographic of people who don’t really care about the information they put into cloud-based AI apps, but for professionals woking with sensitive data that they’re legally prohibited from entering into chat apps, or just anybody who has sensitive information they’re not comfortable sharing, they can instead use it with their local AI.
+
+Zooming out to think even longer term. The vision of AI is eventually to have all our devices equipped with AI which will maximize our productivity. Of course now people are still using the online LLM platforms, but in the future, they’ll be embedded in apps on our devices, so that rather than navigating to a website, a shortcut opens a prompt bar. The idea I’m getting at is the future of AI is going to be embedded in all our technology, not only available through a website.
+
+This future of AI is what Levlex aims to bring to users. A powerful local AI suite of tools that makes Levlex a true AI assistant. More on this later, but back to the benefits of local AI.
+
+Local AI also removes the worry of rate limits and context window limits, because developers and/or users are no longer paying per token, since the AI running on their computers. This enables users to use the LLM more often, and makes it cheaper for AI agents.
+
+For example, take a look at an AI internet search engine. At its core, the way it works is by retrieving search engine results, scraping their page content, then prompting an LLM to generate a summary. This process already involved a lot of input tokens, and depending on the model chosen, a day’s worth of searches could easily cost $2, making the monthly cost per user just for the ai inference over $60. Not to mention that a good AI search recurses, generating new subqueries and scraping, meaning that this monthly cost can be driven way higher depending on the quality of the AI search engine that you create. 
+
+Fortunately, a local AI eliminates this issue. In summary, local AI eliminates the worry of input/output tokens, as well as rate limits. A side effect however, is that local AI models are huge, so a decent amount of RAM is needed to comfortably run these models. Personally, for Levlex, I’ve found that 8GB is the hard lower limit. 16GB is the recommended lower limit, and ideal RAM would be 32Gb or more. Levlex will be described in detail in a moment, but shifting the focus back to what I’ve been working on over the past year/year and a half.
+
+When implementing Levlex, I realized how many moving pieces there were with regards to LLMs, memory, and integrating AI with a cloud application, so I was motivated to develop a developer API which abstracts away the entire process so that developers have a generic api for adding AI and LLMs to their application while the API service worries about keeping everything State of the Art (SOTA).
+
+One of my strong believes about developing a product, especially SAAS, is to differentiate by being unique. Of course I could try to jump in and compete with established larger competitors, but I believe an easier (maybe not easy, but definitely easier) way is to create new user experiences or innovate. So the developer API is not just a wrapper, but it offers new features.
+
+The first of these features is a complete chat endpoint. So normally for LLM development, prompting the LLM and storing the response and updating the chat history/calling functions, is all each a task. However, this endpoint tackles it all. So when a user sends a prompt, a memory store is created, to which memories are added and searched with each prompt, as well as a chat history that is also stored and updated. The response includes a chat ID that allows developers to then retrieve chat history, or perform their own memory search or stores. This endpoint allows developers to create an AI application in far fewer lines of code, and not have to worry about which model is running, memory retrieval techniques, etc. Roughly paraphrasing something I heard in a podcast, in the future, we won’t care which AI model is being run under the hood (because they’ll all be highly performing).
+
+I would like to note that I’ve been heavily invested in AI and it’s developments, and each new announcement of a new architecture or vision model I find very interesting, and I am often awe of how far AI technology has come and by how fast it’s improving, but I’ve also had reality checks of the fact that most people are tapped out of the innovations in AI and LLMs, and so the advancements I find compelling aren’t really cool to them and usually a response of “how is that different from chatGPT?” For this reason there are different levels to Levlex (there are other reasons too, which will be described more in detail later), because some are committed to utilizing AI to boost their productivity, while others just need a simple assistant, and then there are those who fall somewhere in the middle. Realizing this from talking to consumers caused me to create different versions of Levlex targeting these different demographics and solving the specific problems they had. 
+
+Why Levlex? I saw a funny comment on reddit, where the post asked “what is a service you would pay $20 a month for?” And a user replied “something that makes me $40 a month.” And while funny, it also made me realize that boosting productivity is where the value in AI lies. Enabling people to automate the simple and boring tasks, or automating knowledge discovery, will allow us to focus on bigger and harder problems. Talking about subscription pricing, another benefit of local AI is that it eliminates the need for a subscription* (there’s an asterisk, which will be explained later), so users can buy the app once and keep forever, meaning that the cloud AI business can’t give you a less intelligent model, rate limit you, reduce your context window, or any of the other decisions they make in order to cut costs because AI currently isn’t highly scalable. 
+
+The asterisk is for internet. Unfortunately, accessing the internet is really only possible through APIs, as if you try the scraping method you’ll likely run into issues with anti-bot scripts and might even get your IP blocked. So because of this, for internet access, users need to have an internet subscription for Levlex. However, I believe it would be hypocritical to the buy once keep forever, anti-subscription pricing model if there wasn’t another way, so in the Levlex documentation there is a guide explaining how to add internet to Levlex for free and relatively easily.
+
+Back to the topic of the AI API, I named this Genesiss AI, and in addition to the complete chat endpoint, there are also other endpoints which are new and useful. 
+
+There is an endpoint for a model with internet search access. This model has the ability to perform simple internet searches or recursive internet searches (to deeply explore topics).
+
+There are also specific agents you can access through endpoints as well. The following is a short list:
+    * **Code** Generate, run, and receive code outputs from a single prompt.
+    * **DocuComp** AI-driven document and image comprehension from a straightforward prompt.
+    * **DocuGen** Automatically generate text or PDF documents with ease.
+    * **GraphGen** Create dynamic graphs through simple prompts, ideal for data visualization.
+    * **ImageGen** Generate images from text prompts for all your visual content needs.
+    * **Memory** Our custom vector-based memory API lets you add, search, and retrieve context-rich information, keeping memory solutions state-of-the-art.
+
+These can also be used with what I consider to be the biggest innovation from Levlex and Genesiss AI, which is the concept of Workflows. These allow you to define a configuration of agents, and a schedule, and have the job run. This is truly where agents ai comes to life because now you can have AI do things for you. 
+
+An immediate application of this could be Knowledge Discovery. There is a lot of information out there, and having an AI that can go through and analyze, hypothesize, and explore, can greatly improve knowledge-based sectors. For example, academic researchers can’t read every single published paper, but imagine if you had a system which recursively explored and analyzed all the papers in a data base and suggested experiments and provided analyses/summaries. Part of my logic in developing was Levlex was “Ai’s coming to take our jobs, so I’l just make the AI that takes my job ¯\_(ツ)_/¯.” 
+
+Workflows enable you to create automations for your job. A consultant  or investment could utilize a workflow to perform internet research on a company. There are a lot of jobs which are based on internet research, and Workflows can be a game changer for this. In addition to just gathering information, you can generate documents and graphs in a workflow, so you could have your own personalized weekly reports on a topic as a sample workflow.
+
+Another innovation from Genesiss are the concept of Brains, which are memory stores, which allow developers or users to create different memory stores for different tasks. Currently, the way cloud-based LLM apps work is by having one memory which is shared across chats, but what if you could have a Brain just for meetings, one for just studying, one for a specific project? Brains enable this to happen. 
+
+Combining Brain with workflows, means you can have memories for different workflows, as well as share memories across workflows, and even create chats with the Brain, so you can talk to the memories created from the other sources. Hopefully it’s easy to see how interconnected you can use Workflows. While developing all these features, the intention was to make simple and complex use cases simultaneously possible. If a user wanted to Justus brain IDs for categorizing conversations, they could. If a developer wanted to have a Brain for a more complicated orchestration of workflows and chats, that’s also possible.
+
+A lesson I recently learned developing Levlex and Genesiss AI is that it’s not just developing features, but also communicating good use cases to users. I was technically impressed and compelled by the features I had developed, but initially showing them to people, I learned that I had to explain use cases for them to see the value in the product, and another good effect of explaining use cases is that it then beckons “oh! So can it do _____” questions, which is good for identifying new features to implement or refining current features.
+
+I don’t think Levlex will be rendered useless by competition, because it is an offline, private, local solution where the user owns the software and AI once they’ve bought it. But, another way to ensure the longevity of Levlex is to make it extensible, which is why there is a way for more technically inclined people to make extensions for levlex, as well as making Levlex upgradeable based on the latest innovations in AI models. So Levlex scales with your hardware (computing power), as well as improves over time as models improve.
+
+On the topic of applications for Genesiss AI API, I developed Genesiss Agents, which allowed for users to  implement workflows with no code, as well as offered additional features such as a canvas chat, normal chat, and chambers (more on this in another article). Genesiss Search, which is an AI-powered search engine, and Bytesize, which is an internet aggregator that generates summarized updates regarding the internet and your digital ecosystem every 1-6 hours. The issue I ran into implementing these was that which I aforementioned: LLMs don’t scale well over cloud. Furthermore, after realizing Levlex could do all these things and more, I decided to focus my efforts on developing Levlex, and also on developing ample documentation, articles, and tutorials highlighting the wide range of tasks made possible with Levlex.
+
+With the advent of smaller language models, I also noticed a lack of private, offline ai apps on mobile devices, so I also developed an iphone offline AI chat app, which also had a voice to notes feature, as well as an AI Camera feature. I’m also building a surgical robotics system, and the full post for that can be found here. Feel free to explore the pages or my other articles, as I dive into more specific topics then.
+
+This is the bulk of the work I’ve been completing over the past roughly 17 months, with some side projects here and there to learn and experiment with ideas. This blog is one of the projects I’ve launched recently. The full list is as follows:
+    * joshuaokolo.xyz (this blog that you’re reading)
+    * levlex.xyz
+    * genesiss.tech
+    * numinouslabs.xyz
