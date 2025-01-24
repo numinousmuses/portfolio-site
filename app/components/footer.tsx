@@ -35,10 +35,10 @@ export default function Footer() {
             className="flex items-center transition-all hover:text-neutral-800 "
             rel="noopener noreferrer"
             target="_blank"
-            href="https://genesiss.tech/"
+            href="https://x.com/joshuaokolo_"
           >
             <ArrowIcon />
-            <p className="ml-2 h-7">Genesiss AI</p>
+            <p className="ml-2 h-7">Twitter</p>
           </a>
         </li>
         <li>
@@ -57,10 +57,10 @@ export default function Footer() {
             className="flex items-center transition-all hover:text-neutral-800 "
             rel="noopener noreferrer"
             target="_blank"
-            href="https://numinouslabs.com"
+            href="https://bento.me/joshuaokolo"
           >
             <ArrowIcon />
-            <p className="ml-2 h-7">Numinous Labs</p>
+            <p className="ml-2 h-7">Bento</p>
           </a>
         </li>
         <li>
