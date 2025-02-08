@@ -28,6 +28,9 @@ export function BlogPosts() {
               <p className="text-neutral-900  tracking-tight">
                 {post.metadata.title}
               </p>
+              <p className="text-neutral-600 tabular-nums">
+                {post.metadata.summary}
+              </p>
             </div>
           </Link>
         ))}
