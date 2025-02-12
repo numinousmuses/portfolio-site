@@ -36,6 +36,17 @@ export default function Footer() {
             className="flex items-center transition-all hover:text-neutral-800 "
             rel="noopener noreferrer"
             target="_blank"
+            href="https://github.com/numinousmuses"
+          >
+            <ArrowIcon />
+            <p className="ml-2 h-7">Github</p>
+          </a>
+        </li>
+        <li>
+          <a
+            className="flex items-center transition-all hover:text-neutral-800 "
+            rel="noopener noreferrer"
+            target="_blank"
             href="https://www.cxmpute.xyz"
           >
             <ArrowIcon />
